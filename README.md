@@ -1,9 +1,13 @@
 # [Weatherpedia](https://github.com/SandeepKrSuman/weatherpedia)
 
-![](public/weatherHomePage.png)
+![](https://raw.githubusercontent.com/SandeepKrSuman/weatherpedia/master/public/weatherpediaHomePage.png)
+
+<br>
 
 ## Environment
 This app is build using React
+
+<br>
 
 ## Setup
 
