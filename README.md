@@ -20,8 +20,8 @@ After setup, server will start on port `3000` which can be accessed through <htt
 
 ## API
 <https://weatherstack.com/> 
-<br>
-Put your api access key inside ./src/Weather.js to fetch data from the weather api.
+<br><br>
+(Put your api access key inside ./src/Weather.js to fetch data from the weather api.)
 
 
 <br>
