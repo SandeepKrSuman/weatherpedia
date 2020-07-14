@@ -5,7 +5,7 @@
 <br>
 
 ## Environment
-This app is build using React
+This app is built on React
 
 <br>
 
