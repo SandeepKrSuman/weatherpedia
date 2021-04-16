@@ -3,9 +3,11 @@ import Navigate from "./Navigate";
 
 function Title(){
     return ( 
-        <div className = "text-container">
-            <h1>Weatherpedia</h1>
-            <h4>feels like...</h4>
+        <div className = "title-search-container">
+            <span className="mainh">Weatherpedia</span>
+            <br />
+            <span className="subh">feels like...</span>
+            <br /><br />
             <Navigate />
         </div>
      );

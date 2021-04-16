@@ -1,7 +1,6 @@
 import React, {useState} from "react";
 import {Link} from "react-router-dom";
 import WeatherCard from "./WeatherCard";
-import Footer from "./Footer";
 
 function Weather(){
 
@@ -100,7 +99,6 @@ function Weather(){
                 <button type="submit" className = "search-button"><i className="fas fa-search"></i></button>
             </form>
         </div>
-        <Footer />
         </div>
         );
     }

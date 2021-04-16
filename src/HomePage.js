@@ -1,7 +1,6 @@
 import React, {useState} from "react";
 import Navbar from "./Navbar";
 import Title from "./Title";
-import Footer from "./Footer";
 
 function HomePage(){
 
@@ -20,21 +19,18 @@ function HomePage(){
         
 
     return ( 
-        <div>
-        <section>
-            <div className = "row homepage-styl" style = {{margin: "5%"}}>
-                <div className = "col-sm-6 home-title">
+        <div className = "container-fluid">
+            <div className = "row homepage-styl">
+                <div className = "col-md-6 home-title">
                     <Navbar />
                     <Title />
                 </div>
-                <div className = "col-sm-6 home-img" style = {theme}>
+                <div className = "col-md-6 home-img" style = {theme}>
                     <span className="theme-change-btns">
                     <button onClick = {handleTheme} className="theme-change-btn"><i className={clicked ? "fas fa-sun": "fas fa-moon"}></i></button>
                     </span>
                 </div>
             </div>
-        </section>
-        <Footer />
         </div>
      );
 

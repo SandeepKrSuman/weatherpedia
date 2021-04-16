@@ -3,6 +3,10 @@ body{
 background-image: url("https://www.transparenttextures.com/patterns/diagmonds-light.png");
 }
 
+.container-fluid {
+    padding: 3% 12% 3%;
+  }
+
 .home-img{
     border-top-left-radius: 40%;
     border-bottom-left-radius: 60%;
@@ -12,31 +16,26 @@ background-image: url("https://www.transparenttextures.com/patterns/diagmonds-li
 }
 
 .homepage-styl{
-    height: 600px;
+    height: 80vh;
     box-shadow: 5px 5px 30px 7px rgba(0, 0, 0, 0.25), -5px -5px 30px 7px rgba(0, 0, 0, 0.22);
     border-bottom-right-radius: 5%;
+    margin-top: 5vh;
 }
 
-.nav-link{
-    margin-right: 10%;
+.title-search-container{
+    text-align: center;
+    margin-top: 30%;
 }
 
-.navbar-nav:last-child{
-    margin-right: 0;
-}
-
-.text-container{
-    margin-left: 30%;
-    margin-top: 25%;
-}
-
-.text-container h4{
-    margin-left: 30%;
-    font-family: 'Nothing You Could Do', cursive;
-}
-
-.text-container h1{
+.mainh{
     font-family: 'Fondamento', cursive;
+    font-size: 2.5rem;
+}
+
+.subh{
+    font-family: 'Nothing You Could Do', cursive;
+    font-size: 1.5rem;
+    margin-left: 20%;
 }
 
 .search-box{
@@ -48,14 +47,12 @@ background-image: url("https://www.transparenttextures.com/patterns/diagmonds-li
 }
 
 .navigate-page{
-    position: absolute;
-    margin-top: 18%;
-    margin-left: 8%;
-    height: 60px;
-    padding: 10px;
+    background-color: #000000;
+    display: inline-block;
     border-radius: 40px;
-    background-color: #000;
-    box-shadow: 5px 5px 30px 7px rgba(0, 0, 0, 0.25), -5px -5px 30px 7px rgba(0, 0, 0, 0.22);
+    padding: 1%;
+    height: 3rem;
+    margin-top: 2%;
 }
 
 form{
@@ -70,6 +67,7 @@ form{
 }
 
 .navigate-text, .search-input{
+    vertical-align: middle;
     line-height: 40px;
     background: none;
     border: none;
@@ -274,7 +272,7 @@ footer{
 }
 
 
-@media (max-width: 1028px) {
+/* @media (max-width: 1028px) {
     .weather-container-top, .weather-container-bottom{
         width: 90%;
     }
@@ -322,4 +320,38 @@ footer{
     .other-details p{
         font-size: 1.3rem;
     }
+} */
+
+@media (max-width: 767.5px){
+
+    .container-fluid{
+        padding: 0;
+    }
+
+    .homepage-styl{
+        height: 100vh;
+        box-shadow: none;
+        border-bottom-right-radius: 0;
+        margin-top: 0;
+    }
+
+    .navbar-expand .navbar-nav .nav-link {
+        padding-right: .7rem;
+        padding-left: .7rem;
+    }
+    
+    .home-img{
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        box-shadow: none;
+        border-top-left-radius: 80%;
+        
+    }
+    .col-md-6, .row{
+        padding: 0;
+        margin: 0;
+    }
+
+
 }
