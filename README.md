@@ -1,9 +1,13 @@
 # [Weatherpedia](https://github.com/SandeepKrSuman/weatherpedia)
 
-![](public/weatherHomePage.png)
+![](https://raw.githubusercontent.com/SandeepKrSuman/weatherpedia/master/public/weatherpediaHomePage.png)
+
+<br>
 
 ## Environment
-This app is build using React
+This app is built on React
+
+<br>
 
 ## Setup
 
@@ -16,8 +20,8 @@ After setup, server will start on port `3000` which can be accessed through <htt
 
 ## API
 <https://weatherstack.com/> 
-<br>
-Put your api access key inside ./src/Weather.js to fetch data from the weather api.
+<br><br>
+(Put your api access key inside ./src/Weather.js to fetch data from the weather api.)
 
 
 <br>
