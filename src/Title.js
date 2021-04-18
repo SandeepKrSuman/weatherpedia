@@ -1,14 +1,17 @@
 import React from "react";
 import Navigate from "./Navigate";
+import SearchBar from "./SearchBar";
 
-function Title(){
+function Title(props){
     return ( 
         <div className = "title-search-container">
-            <span className="mainh">Weatherpedia</span>
+            {props.temph !== "" ? <span className="temph">{props.temph}</span> : null}
             <br />
-            <span className="subh">feels like...</span>
+            <span className="mainh">{props.mainh}</span>
+            <br />
+            <span className="subh" style = {{marginLeft: `${props.subh.length > 14 ? "0" : "20%"}`}}>{props.subh}</span>
             <br /><br />
-            <Navigate />
+            {props.caller === "homepage" ? <Navigate /> : <SearchBar handleChange={props.handleChange} handleSubmit={props.handleSubmit} value={props.value} />}
         </div>
      );
 }

@@ -1,5 +1,6 @@
 import React, {useState} from "react";
-import {Link} from "react-router-dom";
+import Navbar from "./Navbar";
+import Title from "./Title";
 import WeatherCard from "./WeatherCard";
 
 function Weather(){
@@ -9,7 +10,6 @@ function Weather(){
     const [apiData, setApiData] = useState(null);
 
     
-    // put your api key inside api.key below
     const api = {key: process.env.REACT_APP_ACCESS_KEY, 
                 base: "http://api.weatherstack.com/current?access_key="};
 
@@ -18,90 +18,80 @@ function Weather(){
     }
 
     function handleSubmit(event){
-        fetch (`${api.base}${api.key}&query=${inputTxt}`)
-        .then(res => res.json())
-        .then(data => setApiData(data));
-        setInputTxt("");
+        if(inputTxt !== ""){
+            fetch (`${api.base}${api.key}&query=${inputTxt}`)
+            .then(res => res.json())
+            .then(data => setApiData(data));
+            setInputTxt("");
+        }
         event.preventDefault();
         setDisplay(true);
     }
 
-    function handlelDate(dt){
-        let months = ["Jan.", "Feb.", "March", "April", "May", "June", "July", "Aug.", "Sept.", "Oct.", "Nov.", "Dec."];
-        let date = new Date(`${dt}`);
-        let d = date.getDate();
-        let month = months[date.getMonth()];
-        let year = date.getFullYear();
-        let hour = date.getHours();
-        let min = date.getMinutes();
-        // let sec = date.getSeconds();
-
-        return `${month} ${d}, ${year} ( ${hour}:${min} )`;
-
-    };
-
     const wbgurl = "url(https://raw.githubusercontent.com/SandeepKrSuman/weather_assets/master/weather_backgrounds/";
+    const theme = { backgroundImage: "url(https://raw.githubusercontent.com/SandeepKrSuman/weather_assets/master/weather_backgrounds/homepage-day.jpg)" };
 
     
-    if (display){
-    return ( 
-        <section>
-        <div className="search-box">
-            <form onSubmit={handleSubmit}>
-                <input 
-                className = "search-input" 
-                placeholder="Kolkata, India" 
-                type="text" 
-                spellCheck="false" 
-                name="inputvalue"
-                value = {inputTxt}
-                onChange={handleChange}
-                />
-                <button type="submit" className = "search-button"><i className="fas fa-search"></i></button>
-            </form>
-        </div>
-            <div className="weather-container-top" style = {{backgroundImage: `${wbgurl}${apiData && apiData.success !== false ? (apiData.current.temperature <= 0 ? "snow" : apiData.current.weather_code) : "116"}.jpg`}}>
-                <span className="goback"><Link to ="/" className="back-link"><i className="fas fa-arrow-circle-left"></i></Link></span>
-                <div className="weather-description">
-                <h2 className="descr">{apiData && apiData.success !== false ? apiData.current.weather_descriptions : "Something went Wrong"}</h2>
-                <h1 className="descr">{apiData && apiData.success !== false ? `${apiData.current.temperature}  ℃` : "Please,"}</h1>
-                </div>
-                <h1 className="city-name">{apiData && apiData.success !== false ? `${apiData.location.name}, ${apiData.location.country}` : "Search Again..."}</h1>
-                <span className="date">{apiData && apiData.success !== false ? `${handlelDate(apiData.location.localtime)}` : null}</span>
-            </div>
-            <div className="weather-container-bottom">
-                    <div className="row other-descr">
-                        <WeatherCard heading = "Humidity" body = {apiData && apiData.success !== false ? `${apiData.current.humidity} %`  : null} /> 
-                        <WeatherCard heading = "Wind Speed" body = {apiData && apiData.success !== false ? `${apiData.current.wind_speed} km/hr`  : null} /> 
-                        <WeatherCard heading = "Pressure" body = {apiData && apiData.success !== false ? `${apiData.current.pressure} MB`  : null} /> 
-                        <WeatherCard heading = "Precipitation" body = {apiData && apiData.success !== false ? `${apiData.current.precip} MM`  : null} />   
-                        <div className="feels-like">{apiData && apiData.success !== false ? `Feels Like ${apiData.current.feelslike} ℃`  : null}</div>            
+    if(display && apiData && apiData.success !== false){
+
+        return ( 
+            <div className = "container-fluid">
+                <div className = "row homepage-styl">
+                    <div className = "col-md-6 home-title">
+                        <Navbar />
+                        <Title 
+                        caller="weather" 
+                        temph={`${apiData.current.temperature} ℃`}
+                        mainh={apiData.location.name} 
+                        subh={apiData.location.country}
+                        handleChange={handleChange} 
+                        handleSubmit={handleSubmit}
+                        value={inputTxt} 
+                        />
                     </div>
+                    <div className = "col-md-6 weather-details" style = {{backgroundImage: `${wbgurl}${apiData.current.temperature <= 0 ? "snow" : apiData.current.weather_code}.jpg`}}>
+                        <div className="wdescr">{apiData.current.weather_descriptions}</div>
+                        <div className="row">
+                            <WeatherCard heading = "Humidity" body = {`${apiData.current.humidity} %`} /> 
+                            <WeatherCard heading = "Wind Speed" body = {`${apiData.current.wind_speed} km/hr ( ${apiData.current.wind_dir} )`} /> 
+                            <WeatherCard heading = "Pressure" body = {`${apiData.current.pressure} MB`} /> 
+                            <WeatherCard heading = "Precipitation" body = {`${apiData.current.precip} MM`} />
+                            <WeatherCard heading = "UV index" body = {`${apiData.current.uv_index}`} />
+                            <WeatherCard heading = "Visibility" body = {`${apiData.current.visibility} km`} />
+                        </div>
+                        <div className="feels-like">{`Feels Like ${apiData.current.feelslike} ℃`}</div>
+                    </div>
+                </div>
             </div>
-        </section>
-     );
+         );
+
     }
 
     else{
-        return (
-        <div>
-        <div className="search-box">
-            <form onSubmit={handleSubmit}>
-                <input 
-                className = "search-input" 
-                placeholder="Kolkata, India" 
-                type="text" 
-                spellCheck="false" 
-                name="inputvalue"
-                value = {inputTxt}
-                onChange={handleChange}
-                />
-                <button type="submit" className = "search-button"><i className="fas fa-search"></i></button>
-            </form>
-        </div>
-        </div>
-        );
+        
+        return ( 
+            <div className = "container-fluid">
+                <div className = "row homepage-styl">
+                    <div className = "col-md-6 home-title">
+                        <Navbar />
+                        <Title 
+                        caller="weather" 
+                        temph="" 
+                        mainh="Weatherpedia" 
+                        subh="feels like..."
+                        handleChange={handleChange} 
+                        handleSubmit={handleSubmit}
+                        value={inputTxt} 
+                        />
+                    </div>
+                    <div className = "col-md-6 home-img" style = {theme}>
+                    </div>
+                </div>
+            </div>
+         );
+
     }
+
 }
 
 export default Weather;

@@ -2,9 +2,12 @@ import React from "react";
 
 function WeatherCard(props){
     return( 
-        <div className="col-sm-6 other-details">
-            <h4>{props.heading}</h4>
-            <p>{props.body}</p>
+        <div className="col-6 weather-cards">
+            <div className="weather-card">
+                <span className="crd-heading">{props.heading}</span>
+                <br />
+                <span className="crd-body">{props.body}</span>
+            </div>
         </div>  
      );
 }

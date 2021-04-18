@@ -21,9 +21,13 @@ function HomePage(){
     return ( 
         <div className = "container-fluid">
             <div className = "row homepage-styl">
-                <div className = "col-md-6 home-title">
+                <div className = "col-md-6">
                     <Navbar />
-                    <Title />
+                    <Title 
+                    caller="homepage" 
+                    mainh="Weatherpedia" 
+                    subh="feels like..." 
+                    />
                 </div>
                 <div className = "col-md-6 home-img" style = {theme}>
                     <span className="theme-change-btns">

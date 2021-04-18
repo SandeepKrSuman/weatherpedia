@@ -5,7 +5,7 @@ function Navigate(){
     return ( 
         <div className="navigate-page">
             <span className = "navigate-text">Make a Search</span>
-            <button className = "navigate-button"><Link to ="/weather" className="back-link"><i className="fas fa-arrow-right"></i></Link></button>
+            <button className = "navigate-button"><Link to ="/weather"><i className="fas fa-arrow-right"></i></Link></button>
         </div>
      );
 }
