@@ -9,7 +9,7 @@ function Title(props){
             <br />
             <span className="mainh">{props.mainh}</span>
             <br />
-            <span className="subh" style = {{marginLeft: `${props.subh.length > 14 ? "0" : "20%"}`}}>{props.subh}</span>
+            <span className="subh">{props.subh}</span>
             <br /><br />
             {props.caller === "homepage" ? <Navigate /> : <SearchBar handleChange={props.handleChange} handleSubmit={props.handleSubmit} value={props.value} />}
         </div>

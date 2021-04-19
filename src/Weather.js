@@ -10,8 +10,7 @@ function Weather(){
     const [apiData, setApiData] = useState(null);
 
     
-    const api = {key: process.env.REACT_APP_ACCESS_KEY, 
-                base: "http://api.weatherstack.com/current?access_key="};
+    const api = `${process.env.REACT_APP_API_URL}`;
 
     function handleChange(event){
         setInputTxt(event.target.value);
@@ -19,7 +18,7 @@ function Weather(){
 
     function handleSubmit(event){
         if(inputTxt !== ""){
-            fetch (`${api.base}${api.key}&query=${inputTxt}`)
+            fetch (`${api}${inputTxt}`)
             .then(res => res.json())
             .then(data => setApiData(data));
             setInputTxt("");
@@ -28,11 +27,13 @@ function Weather(){
         setDisplay(true);
     }
 
-    const wbgurl = "url(https://raw.githubusercontent.com/SandeepKrSuman/weather_assets/master/weather_backgrounds/";
+    const wbgurl = "url(https://raw.githubusercontent.com/SandeepKrSuman/weather_assets/master/weather_backgrounds/_";
     const theme = { backgroundImage: "url(https://raw.githubusercontent.com/SandeepKrSuman/weather_assets/master/weather_backgrounds/homepage-day.jpg)" };
 
     
-    if(display && apiData && apiData.success !== false){
+    if(display && apiData && apiData.cod === 200){
+
+        const getBgUseId = (apiData.weather[0].id === 741 || apiData.weather[0].id === 781 || apiData.weather[0].id === 801 || apiData.weather[0].id === 802 || apiData.weather[0].id === 803 || apiData.weather[0].id === 804) ? true : false;
 
         return ( 
             <div className = "container-fluid">
@@ -41,25 +42,25 @@ function Weather(){
                         <Navbar />
                         <Title 
                         caller="weather" 
-                        temph={`${apiData.current.temperature} ℃`}
-                        mainh={apiData.location.name} 
-                        subh={apiData.location.country}
+                        temph={`${Math.round(apiData.main.temp)} ℃`}
+                        mainh={apiData.name} 
+                        subh={apiData.sys.country}
                         handleChange={handleChange} 
                         handleSubmit={handleSubmit}
                         value={inputTxt} 
                         />
                     </div>
-                    <div className = "col-md-6 weather-details" style = {{backgroundImage: `${wbgurl}${apiData.current.temperature <= 0 ? "snow" : apiData.current.weather_code}.jpg`}}>
-                        <div className="wdescr">{apiData.current.weather_descriptions}</div>
+                    <div className = "col-md-6 weather-details" style = {{backgroundImage: `${wbgurl}${getBgUseId ? apiData.weather[0].id : apiData.weather[0].icon}.jpg`}}>
+                        <div className="wdescr">{apiData.weather[0].description}</div>
                         <div className="row">
-                            <WeatherCard heading = "Humidity" body = {`${apiData.current.humidity} %`} /> 
-                            <WeatherCard heading = "Wind Speed" body = {`${apiData.current.wind_speed} km/hr ( ${apiData.current.wind_dir} )`} /> 
-                            <WeatherCard heading = "Pressure" body = {`${apiData.current.pressure} MB`} /> 
-                            <WeatherCard heading = "Precipitation" body = {`${apiData.current.precip} MM`} />
-                            <WeatherCard heading = "UV index" body = {`${apiData.current.uv_index}`} />
-                            <WeatherCard heading = "Visibility" body = {`${apiData.current.visibility} km`} />
+                            <WeatherCard heading = "Min/Max" body = {`${Math.round(apiData.main.temp_min)} ℃ / ${Math.round(apiData.main.temp_max)} ℃`} />
+                            <WeatherCard heading = "Humidity" body = {`${apiData.main.humidity} %`} /> 
+                            <WeatherCard heading = "Wind Speed" body = {`${Math.round((apiData.wind.speed)*3.6)} km/h`} /> 
+                            <WeatherCard heading = "Pressure" body = {`${apiData.main.pressure} hPa`} /> 
+                            <WeatherCard heading = "Clouds" body = {`${apiData.clouds.all} %`} />
+                            <WeatherCard heading = "Visibility" body = {`${Math.round((apiData.visibility)/1000)} km`} />
                         </div>
-                        <div className="feels-like">{`Feels Like ${apiData.current.feelslike} ℃`}</div>
+                        <div className="feels-like">{`Feels Like ${Math.round(apiData.main.feels_like)} ℃`}</div>
                     </div>
                 </div>
             </div>
