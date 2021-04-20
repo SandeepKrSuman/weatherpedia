@@ -33,7 +33,9 @@ function Weather(){
     }
 
     const wbgurl = "url(https://raw.githubusercontent.com/SandeepKrSuman/weather_assets/master/weather_backgrounds/_";
-    const theme = { backgroundImage: "url(https://raw.githubusercontent.com/SandeepKrSuman/weather_assets/master/weather_backgrounds/homepage-day.jpg)" };
+    const dt = new Date().getHours();
+    const d = (dt >= 6 && dt <= 18) ? true : false;
+    const theme = { backgroundImage: `url(https://raw.githubusercontent.com/SandeepKrSuman/weather_assets/master/weather_backgrounds/themechange_${d}.jpg)` };
 
     
     if(display && apiData && apiData.cod === 200){

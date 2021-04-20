@@ -4,18 +4,17 @@ import Title from "./Title";
 
 function HomePage(){
 
-    const [clicked, setClicked] = useState(false);
+    const dt = new Date().getHours();
+    const d = (dt >= 6 && dt <= 18) ? true : false;
+
+    const [isDay, setDay] = useState(d);
 
         function handleTheme(){
-            setClicked(!clicked);
+            setDay(!isDay);
         }
 
 
-    const theme = { backgroundImage: "url(https://raw.githubusercontent.com/SandeepKrSuman/weather_assets/master/weather_backgrounds/homepage-day.jpg)" }
-
-    clicked ? theme.backgroundImage = "url(https://raw.githubusercontent.com/SandeepKrSuman/weather_assets/master/weather_backgrounds/homepage-night.jpg)" : 
-    theme.backgroundImage = "url(https://raw.githubusercontent.com/SandeepKrSuman/weather_assets/master/weather_backgrounds/homepage-day.jpg)";
-    
+    const theme = { backgroundImage: `url(https://raw.githubusercontent.com/SandeepKrSuman/weather_assets/master/weather_backgrounds/themechange_${isDay}.jpg)` };
         
 
     return ( 
@@ -31,7 +30,7 @@ function HomePage(){
                 </div>
                 <div className = "col-md-6 home-img" style = {theme}>
                     <span className="theme-change-btns">
-                    <button onClick = {handleTheme} className="theme-change-btn"><i className={clicked ? "fas fa-sun": "fas fa-moon"}></i></button>
+                    <button onClick = {handleTheme} className="theme-change-btn"><i className={isDay ? "fas fa-moon": "fas fa-sun"}></i></button>
                     </span>
                 </div>
             </div>
