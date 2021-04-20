@@ -84,12 +84,25 @@ form{
     outline: none;
 }
 
-.fa-search, .fa-arrow-right{
+.fa-search, .fa-arrow-right, .fa-spinner{
     color: #000000;
     background-color: #ffffff;
     padding: 35%;
     border-radius: 50%;
 }
+
+.fa-spinner{
+    animation: rotation 1s infinite linear;
+}
+
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
 
 .fa-sun, .fa-moon{
     font-size: larger;

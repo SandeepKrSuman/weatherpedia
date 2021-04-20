@@ -8,6 +8,7 @@ function Weather(){
     const [display, setDisplay] = useState(false);
     const [inputTxt, setInputTxt] = useState("");
     const [apiData, setApiData] = useState(null);
+    const [isLoading, setLoading] = useState(false);
 
     
     const api = `${process.env.REACT_APP_API_URL}`;
@@ -17,11 +18,15 @@ function Weather(){
     }
 
     function handleSubmit(event){
+        setLoading(true);
         if(inputTxt !== ""){
             fetch (`${api}${inputTxt}`)
             .then(res => res.json())
-            .then(data => setApiData(data));
+            .then(data => {setApiData(data); setLoading(false);});
             setInputTxt("");
+        }
+        else{
+            setLoading(false);
         }
         event.preventDefault();
         setDisplay(true);
@@ -42,6 +47,7 @@ function Weather(){
                         <Navbar />
                         <Title 
                         caller="weather" 
+                        loading = {isLoading}
                         temph={`${Math.round(apiData.main.temp)} ℃`}
                         mainh={apiData.name} 
                         subh={apiData.sys.country}
@@ -76,6 +82,7 @@ function Weather(){
                     <div className = "col-md-6 home-title">
                         <Navbar />
                         <Title 
+                        loading = {isLoading}
                         caller="weather" 
                         temph="" 
                         mainh="Weatherpedia" 

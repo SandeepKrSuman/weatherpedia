@@ -11,7 +11,7 @@ function Title(props){
             <br />
             <span className="subh">{props.subh}</span>
             <br /><br />
-            {props.caller === "homepage" ? <Navigate /> : <SearchBar handleChange={props.handleChange} handleSubmit={props.handleSubmit} value={props.value} />}
+            {props.caller === "homepage" ? <Navigate /> : <SearchBar loading={props.loading} handleChange={props.handleChange} handleSubmit={props.handleSubmit} value={props.value} />}
         </div>
      );
 }

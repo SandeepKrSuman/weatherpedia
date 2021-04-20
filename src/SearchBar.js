@@ -6,14 +6,15 @@ function SearchBar(props){
             <input 
             type="text" 
             className="navigate-text" 
-            placeholder="enter a city name" 
+            placeholder={props.loading ? " Loading ..." : "enter a city name"}
             autoComplete="off" 
             spellCheck="false" 
             name="inputvalue" 
             value = {props.value} 
             onChange={props.handleChange} 
+            disabled = {props.loading ? true : false} 
             />
-            <button type="submit" className="navigate-button"><i className="fas fa-search"></i></button>
+            <button type="submit" className="navigate-button" disabled = {props.loading ? true : false}>{props.loading ? <i className="fas fa-spinner"></i> : <i className="fas fa-search"></i>}</button>
         </form>
      );
 }
