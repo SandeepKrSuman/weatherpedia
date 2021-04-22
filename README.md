@@ -1,10 +1,10 @@
-# [Weatherpedia](https://github.com/SandeepKrSuman/weatherpedia)
+# [Weatherpedia ⛅](https://github.com/SandeepKrSuman/weatherpedia)
 
 ![](./public/weatherpediaHomePage.png)
 
 <br>
 
-## Tech Stack
+## Tech Stack 📚
 - Built on [ReactJS](https://reactjs.org/) using [create-react-app](https://github.com/facebook/create-react-app) .
 <p align="center">
      <img atl="React" src="https://img.shields.io/badge/-react-black?logo=react&style=for-the-badge">
@@ -68,7 +68,7 @@ Weatherpedia
 
 <br>
 
-<h2 align="center">Setup</h2>
+<h2 align="center">Setup 🛠</h2>
 
 ### Prerequisites :
 
@@ -95,21 +95,21 @@ If a version shows up, means node is installed. If not, install the LTS version 
   > 
   > Step 5: Go to ```.env``` file and type in ```REACT_APP_API_URL=https://api.openweathermap.org/data/2.5/weather?appid=<YOUR API KEY HERE>&units=metric&q=```. Strictly maintian the structure of the url. (Also note that  environment variables in React should start with ```REACT_APP_```)
   > 
-  > Step 4: ```npm install```
+  > Step 6: On the command line / terminal type in ```npm install``` to install dependencies
   > 
-  > Step 5: Finally run the app using ```npm start```
+  > Step 7: Finally run the app using ```npm start```
   > 
   >  The server will start on port `3000` which can be accessed through <http://localhost:3000/> .
   >  
 
 <br>
 
-## API
+## API 📊
 This React app fetches current weather data from [OpenWeather](https://openweathermap.org/) using [OpenWeatherMap API](https://openweathermap.org/api).
 
 <br>
      
-## Developer
+## Developer 😎
 Made with ❤ by [SandeepKrSuman](https://github.com/SandeepKrSuman).
 
   <br><br>
