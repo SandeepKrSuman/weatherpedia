@@ -116,11 +116,13 @@ Made with ❤ by [SandeepKrSuman](https://github.com/SandeepKrSuman).
 
   <br><br>
 
-  ### Credits for using the pictures
-  
-  The pictures used in this app are royalty free pictures. Proper credits are given to the creators below. 
-    
-    Shout-out to these amazing people :
+### Credits for using the pictures
+
+The pictures used in this app are royalty free pictures. Proper credits are given to the creators below.
+
+<br>
+
+Shout-out to these amazing people :
 
   | Pictures used in the app | Credits |
   | ------- | ------ |
