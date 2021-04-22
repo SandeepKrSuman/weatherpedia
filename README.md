@@ -93,7 +93,7 @@ If a version shows up, means node is installed. If not, install the LTS version 
   > 
   > Step 4: Open the project in your favourite text editor
   > 
-  > Step 5: Go to ```.env``` file and type in ```REACT_APP_API_URL=https://api.openweathermap.org/data/2.5/weather?appid=<YOUR API KEY HERE>&units=metric&q=```. Strictly maintian the structure of the url. (Also note that  environment variables in React should start with ```REACT_APP_```)
+  > Step 5: Go to ```.env``` file and type in ```REACT_APP_API_URL=https://api.openweathermap.org/data/2.5/weather?appid=<YOUR API KEY HERE>&units=metric&q=```. Strictly maintian the structure of the url and save the ```.env``` file. (Also note that  environment variables in React should start with ```REACT_APP_```)
   > 
   > Step 6: On the command line / terminal type in ```npm install``` to install dependencies
   > 
@@ -112,4 +112,26 @@ This React app fetches current weather data from [OpenWeather](https://openweath
 ## Developer 😎
 Made with ❤ by [SandeepKrSuman](https://github.com/SandeepKrSuman).
 
-  <br><br>
+  <br><br><br>
+
+  ### Credits for using the pictures on the app
+  The pictures used in this app are royalty free pictures. Proper credits are given to the creators below.
+   
+  <p align="center">shoutout to these amazing people:</p>
+
+  | Pictures used in the app | Credits |
+  | ------- | ------ |
+  | [homepage-day](https://www.freeimages.com/photo/sunset-1364946) | [ela23](https://www.freeimages.com/photographer/ela23-50489) |
+  | [homepage-night](https://www.freeimages.com/photo/full-moon-rising-over-tree-tops-1312287) | [Alexei Novikov](https://www.freeimages.com/photographer/nolexa-54340) |
+  | [snowfall](https://unsplash.com/photos/_TuI8tZHlk4) | [Josh Hild](https://unsplash.com/@joshhild) |
+  | [clear-day](https://www.freeimages.com/photo/sun-blast-1538370) | [Matthew Bowden](https://www.freeimages.com/photographer/thesaint-30769) |
+  | [drizzle](https://unsplash.com/photos/rWwj4zcOcIs) | [Philippe Tarbouriech](https://unsplash.com/@phitar) |
+  | [rainfall](https://unsplash.com/photos/00yDgACVeMA) | [Jack Finnigan](https://unsplash.com/@jackofallstreets) |
+  | [thunder](https://unsplash.com/photos/jSADgWPmKDU) | [Michael D](https://unsplash.com/@alienaperture) |
+  | [Haze](https://www.freeimages.com/photo/bridge-in-the-haze-1455835) | [Luca Cinacchio](https://www.freeimages.com/photographer/cinacchi-30870) |
+  | [fog](https://unsplash.com/photos/OdBFUurPHjo) | [Sebin Thomas](https://unsplash.com/@sebinthomas) |
+  | [squall](https://unsplash.com/photos/nmv3h1QP1ic) | [Andrea Fabry](https://unsplash.com/@akfabry) |
+  | [tornado](https://www.pexels.com/photo/lightning-and-tornado-hitting-village-1446076/) | [Ralph W. lambrecht](https://www.pexels.com/@ralph-w-lambrecht-642090) |
+  | [scattered-cloud](https://unsplash.com/photos/04zTvMalMfU) | [Adriel Kloppenburg](https://unsplash.com/@adriel) |
+  | [overcast-clouds](https://unsplash.com/photos/IghZxJgO94M) | [Nathan Anderson](https://unsplash.com/@nathananderson) |
+  | [clear-night](https://unsplash.com/photos/bXk3Qn6HXk8) | [Raimond Klavins](https://unsplash.com/@raimondklavins) |
