@@ -105,19 +105,22 @@ If a version shows up, means node is installed. If not, install the LTS version 
 <br>
 
 ## API 📊
+
 This React app fetches current weather data from [OpenWeather](https://openweathermap.org/) using [OpenWeatherMap API](https://openweathermap.org/api).
 
 <br>
      
 ## Developer 😎
+
 Made with ❤ by [SandeepKrSuman](https://github.com/SandeepKrSuman).
 
-  <br><br><br>
+  <br><br>
 
-  ### Credits for using the pictures on the app
-  The pictures used in this app are royalty free pictures. Proper credits are given to the creators below.
-   
-  <p align="center">shoutout to these amazing people:</p>
+  ### Credits for using the pictures
+  
+  The pictures used in this app are royalty free pictures. Proper credits are given to the creators below. 
+    
+    Shout-out to these amazing people :
 
   | Pictures used in the app | Credits |
   | ------- | ------ |
