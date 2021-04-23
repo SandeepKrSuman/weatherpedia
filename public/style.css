@@ -42,7 +42,7 @@ body{
     font-size: 1.5rem;
     margin-left: 20%;
 }
-/* fixing button overflow */
+
 .navigate-page{
     background-color: #000000;
     display: inline-block;
