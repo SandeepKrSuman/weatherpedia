@@ -87,13 +87,11 @@ form{
 .fa-search, .fa-arrow-right, .fa-spinner{
     color: #000000;
     background-color: #ffffff;
-    padding: 35%;
+    padding: 25%;
     border-radius: 50%;
 }
 
-/* testing for button overflow */
-
-/* .fa-spinner{
+.fa-spinner{
     animation: rotation 1s infinite linear;
 }
 
@@ -104,7 +102,7 @@ form{
     to {
       transform: rotate(359deg);
     }
-  } */
+  }
 
 .fa-sun, .fa-moon{
     font-size: larger;
