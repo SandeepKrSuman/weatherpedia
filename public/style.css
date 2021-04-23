@@ -91,7 +91,9 @@ form{
     border-radius: 50%;
 }
 
-.fa-spinner{
+/* testing for button overflow */
+
+/* .fa-spinner{
     animation: rotation 1s infinite linear;
 }
 
@@ -102,7 +104,7 @@ form{
     to {
       transform: rotate(359deg);
     }
-  }
+  } */
 
 .fa-sun, .fa-moon{
     font-size: larger;
