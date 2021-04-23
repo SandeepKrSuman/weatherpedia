@@ -1,4 +1,4 @@
-# [Weatherpedia ⛅](https://github.com/SandeepKrSuman/weatherpedia)
+# [Weatherpedia](https://github.com/SandeepKrSuman/weatherpedia) ⛅
 
 ![](./public/weatherpediaHomePage.png)
 
