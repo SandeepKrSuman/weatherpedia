@@ -93,7 +93,7 @@ If a version shows up, means node is installed. If not, install the LTS version 
   > 
   > Step 4: Open the project in your favourite text editor
   > 
-  > Step 5: Go to ```.env``` file and type in ```REACT_APP_API_URL=https://api.openweathermap.org/data/2.5/weather?appid=<YOUR API KEY HERE>&units=metric&q=```. Strictly maintian the structure of the url and save the ```.env``` file. (Also note that  environment variables in React should start with ```REACT_APP_```)
+  > Step 5: Go to ```.env``` file and type in ```REACT_APP_API_URL=https://api.openweathermap.org/data/2.5/weather?appid=<YOUR API KEY HERE>&units=metric&q=```. Strictly maintian the structure of the url and make sure it ends with ```&q=```. Put your ```API Key``` in place of ```<YOUR API KEY HERE>``` and save the ```.env``` file. (Also note that  environment variables in React should start with ```REACT_APP_```)
   > 
   > Step 6: On the command line / terminal type in ```npm install``` to install dependencies
   > 
