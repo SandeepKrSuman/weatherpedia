@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+.card {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px;
+    border-radius: 15px;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.heading {
+    font-size: 1.3rem;
+    font-weight: bolder;
+    margin-bottom: 5px;
+}
+
+.body {
+    font-size: 0.9rem;
+}

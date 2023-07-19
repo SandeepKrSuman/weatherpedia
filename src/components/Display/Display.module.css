@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Fondamento&family=Montserrat&family=Nothing+You+Could+Do&display=swap');
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.5;
+    margin-top: 25%;
+}
+
+.temph {
+    font-size: 2rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.mainh {
+    font-size: 2.5rem;
+    font-family: 'Fondamento', cursive;
+}
+
+.subh {
+    font-size: 1.5rem;
+    font-family: 'Nothing You Could Do', cursive;
+    align-self: flex-end;
+}
+
+.errorMsg {
+    color: #ff0000;
+    text-align: center;
+    font-size: 0.8rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+@media (max-width: 980px) {
+    .container {
+        margin-top: 15%;
+    }
+}

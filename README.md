@@ -1,6 +1,6 @@
 # [Weatherpedia](https://github.com/SandeepKrSuman/weatherpedia) ⛅
 
-![](./public/weatherpediaHomePage.png)
+![](./public/homepage.jpg)
 
 <br>
 
@@ -9,7 +9,7 @@
 - Built on [ReactJS](https://reactjs.org/) using [create-react-app](https://github.com/facebook/create-react-app) .
 <p align="center">
      <img atl="React" src="https://img.shields.io/badge/-react-black?logo=react&style=for-the-badge">
-     <img alt="Bootstrap" src="https://img.shields.io/badge/-bootstrap-blueviolet?logo=bootstrap&logoColor=white&style=for-the-badge">
+     <img alt="React Icons" src="https://img.shields.io/badge/-React%20Icons-red?logo=react&logoColor=white&style=for-the-badge">
      <img alt="JavaScript" src="https://img.shields.io/badge/-javascript-yellow?logo=javascript&logoColor=white&style=for-the-badge">
      <img alt="css" src="https://img.shields.io/badge/-css3-blue?logo=css3&style=for-the-badge">
      <img alt="html" src="https://img.shields.io/badge/-html5-red?logo=html5&logoColor=white&style=for-the-badge">
@@ -20,54 +20,6 @@
 ## Demo 🎥
 
 ![](./public/weatherpedia_gif.gif)
-
-<br>
-
-## Project Structure 🔌
-
-```
-Weatherpedia
-|
-|__________public                 # contains static files
-|          |
-|          |_____index.html       # contains root div, meta tags, style links, cdn's, etc.
-|          |
-|          |_____style.css        # contains all the css styles used any where in the project
-|          |
-|          *Other static files*
-|
-|
-|__________src                    # contains source files / components
-|          |
-|          |_____App.js           # handles react router and routes
-|          |
-|          |_____HomePage.js      # homepage component, handles theme and theme change on homepage
-|          |
-|          |_____Index.js         # react-dom, renders App component to root div in index.html
-|          |
-|          |_____Navbar.js        # Navbar component
-|          |
-|          |_____Navigate.js      # contains navigate button which on click changes the route to "/weather"
-|          |
-|          |_____SearchBar.js     # SearchBar component, form with a input field to accept a city name
-|          |
-|          |_____Title.js         # for displaying titles and/or temperature, city name & country code
-|          |
-|          |_____Weather.js       # handles major functions of the app - api fetching and displaying the weather data
-|          |
-|          |_____WeatherCard.js   # generates a card for different values of weather data passed as props from Weather.js
-|
-|
-|__________.env                   # for storing environment variables
-|
-|__________.gitignore             # specifies intentionally untracked files that Git should ignore
-|
-|__________README.md              # github readme file
-|
-|
-*other project files*
-
-```
 
 <br>
 
@@ -95,7 +47,7 @@ Weatherpedia
 >
 > Step 4: Open the project in your favourite text editor
 >
-> Step 5: Create a `.env` file in the root of the project and type in `REACT_APP_API_URL=https://api.openweathermap.org/data/2.5/weather?appid=<YOUR API KEY HERE>&units=metric&q=`. Strictly maintian the structure of the url and make sure it ends with `&q=`. Take a look at `.env.example` file for reference. Put your `API Key` in place of `<YOUR API KEY HERE>` and save the `.env` file. (Also note that environment variables in React should start with `REACT_APP_`)
+> Step 5: Create a `.env` file in the root of the project and store your API key. Take a look at `.env.example` file for reference. Put your `API Key` in place of `<YOUR API KEY HERE>` and save the `.env` file. (Also note that environment variables in React should start with `REACT_APP_`)
 >
 > Step 6: On the command line / terminal type in `npm install` to install dependencies
 >
@@ -129,15 +81,17 @@ Shout-out to these amazing people :
 | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------ |
 | [homepage-day](https://www.freeimages.com/photo/sunset-1364946)                            | [ela23](https://www.freeimages.com/photographer/ela23-50489)             |
 | [homepage-night](https://www.freeimages.com/photo/full-moon-rising-over-tree-tops-1312287) | [Alexei Novikov](https://www.freeimages.com/photographer/nolexa-54340)   |
-| [snowfall](https://unsplash.com/photos/_TuI8tZHlk4)                                        | [Josh Hild](https://unsplash.com/@joshhild)                              |
+| [snow](https://unsplash.com/photos/_TuI8tZHlk4)                                            | [Josh Hild](https://unsplash.com/@joshhild)                              |
 | [clear-day](https://www.freeimages.com/photo/sun-blast-1538370)                            | [Matthew Bowden](https://www.freeimages.com/photographer/thesaint-30769) |
 | [drizzle](https://unsplash.com/photos/rWwj4zcOcIs)                                         | [Philippe Tarbouriech](https://unsplash.com/@phitar)                     |
-| [rainfall](https://unsplash.com/photos/00yDgACVeMA)                                        | [Jack Finnigan](https://unsplash.com/@jackofallstreets)                  |
-| [thunder](https://unsplash.com/photos/jSADgWPmKDU)                                         | [Michael D](https://unsplash.com/@alienaperture)                         |
-| [Haze](https://www.freeimages.com/photo/bridge-in-the-haze-1455835)                        | [Luca Cinacchio](https://www.freeimages.com/photographer/cinacchi-30870) |
+| [rain](https://unsplash.com/photos/00yDgACVeMA)                                            | [Jack Finnigan](https://unsplash.com/@jackofallstreets)                  |
+| [thunderstorm](https://unsplash.com/photos/jSADgWPmKDU)                                    | [Michael D](https://unsplash.com/@alienaperture)                         |
+| [haze](https://www.freeimages.com/photo/bridge-in-the-haze-1455835)                        | [Luca Cinacchio](https://www.freeimages.com/photographer/cinacchi-30870) |
 | [fog](https://unsplash.com/photos/OdBFUurPHjo)                                             | [Sebin Thomas](https://unsplash.com/@sebinthomas)                        |
 | [squall](https://unsplash.com/photos/nmv3h1QP1ic)                                          | [Andrea Fabry](https://unsplash.com/@akfabry)                            |
 | [tornado](https://www.pexels.com/photo/lightning-and-tornado-hitting-village-1446076/)     | [Ralph W. lambrecht](https://www.pexels.com/@ralph-w-lambrecht-642090)   |
-| [scattered-cloud](https://unsplash.com/photos/04zTvMalMfU)                                 | [Adriel Kloppenburg](https://unsplash.com/@adriel)                       |
-| [overcast-clouds](https://unsplash.com/photos/IghZxJgO94M)                                 | [Nathan Anderson](https://unsplash.com/@nathananderson)                  |
+| [partly-cloudy](https://unsplash.com/photos/04zTvMalMfU)                                   | [Adriel Kloppenburg](https://unsplash.com/@adriel)                       |
+| [overcast](https://unsplash.com/photos/IghZxJgO94M)                                        | [Nathan Anderson](https://unsplash.com/@nathananderson)                  |
+| [default-background](https://pixabay.com/photos/wood-boards-texture-wooden-brown-1846972/) | [Pexels](https://pixabay.com/users/pexels-2286921/)                      |
+| [volcanic-ash](https://pixabay.com/photos/tongariro-new-zealand-volcanoes-6286058/)        | [jawajeziorski](https://pixabay.com/users/jawajeziorski-21806402/)       |
 | [clear-night](https://unsplash.com/photos/bXk3Qn6HXk8)                                     | [Raimond Klavins](https://unsplash.com/@raimondklavins)                  |
