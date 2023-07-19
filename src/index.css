@@ -7,4 +7,5 @@
 body {
     background-color: white;
     background-image: url(../public/diagmonds-light.png);
+    -webkit-tap-highlight-color: transparent;
 }
