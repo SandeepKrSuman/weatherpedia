@@ -6,9 +6,10 @@
 
 ## Tech Stack 📚
 
-- Built on [ReactJS](https://reactjs.org/) using [create-react-app](https://github.com/facebook/create-react-app) .
+- Built with [ReactJS](https://react.dev/) and [Vite](https://vitejs.dev/) .
 <p align="center">
      <img atl="React" src="https://img.shields.io/badge/-react-black?logo=react&style=for-the-badge">
+     <img atl="Vite" src="https://img.shields.io/badge/-vite-yellow?logo=vite&style=for-the-badge">
      <img alt="React Icons" src="https://img.shields.io/badge/-React%20Icons-red?logo=react&logoColor=white&style=for-the-badge">
      <img alt="JavaScript" src="https://img.shields.io/badge/-javascript-yellow?logo=javascript&logoColor=white&style=for-the-badge">
      <img alt="css" src="https://img.shields.io/badge/-css3-blue?logo=css3&style=for-the-badge">
@@ -47,13 +48,13 @@
 >
 > Step 4: Open the project in your favourite text editor
 >
-> Step 5: Create a `.env` file in the root of the project and store your API key. Take a look at `.env.example` file for reference. Put your `API Key` in place of `<YOUR API KEY HERE>` and save the `.env` file. (Also note that environment variables in React should start with `REACT_APP_`)
+> Step 5: Create a `.env` file in the root of the project and store your API key. Take a look at `.env.example` file for reference. Put your `API Key` in place of `<YOUR API KEY HERE>` and save the `.env` file.
 >
 > Step 6: On the command line / terminal type in `npm install` to install dependencies
 >
-> Step 7: Finally run the app using `npm start`
+> Step 7: Finally run the app using `npm run dev`
 >
-> The server will start on port `3000` which can be accessed through <http://localhost:3000/> .
+> The server will start on port `5173` which can be accessed through <http://localhost:5173/> .
 
 <br>
 
