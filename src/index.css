@@ -1,11 +1,11 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: white;
-    background-image: url(../public/diagmonds-light.png);
-    -webkit-tap-highlight-color: transparent;
+  background-color: white;
+  background-image: url(/diagmonds-light.png);
+  -webkit-tap-highlight-color: transparent;
 }

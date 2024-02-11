@@ -1,4 +1,3 @@
-import React from "react";
 import MainLayout from "../MainLayout/MainLayout";
 import styles from "./HomePage.module.css";
 

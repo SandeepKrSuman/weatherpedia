@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { FaSearch, FaSpinner } from "react-icons/fa";
 import styles from "./SearchBox.module.css";
 
-const baseUrl = `https://api.openweathermap.org/data/2.5/weather?appid=${process.env.REACT_APP_KEY}&units=metric&q=`;
+const baseUrl = `https://api.openweathermap.org/data/2.5/weather?appid=${
+  import.meta.env.VITE_APP_KEY
+}&units=metric&q=`;
 
 export default function SearchBox(props) {
   const [searchText, setSearchText] = useState(""); // stores input text i.e. city name.

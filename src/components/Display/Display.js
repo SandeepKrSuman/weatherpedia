@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./Display.module.css";
 
 // Initially displays the branding

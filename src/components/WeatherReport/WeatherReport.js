@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./WeatherReport.module.css";
 import Card from "../Card/Card";
 
